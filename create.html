@@ -1,0 +1,29 @@
+<div class="toolbar" layout="row" layout-align="space-between center">
+    <md-button class="md-icon-button" ng-click="create.showList()" 
+                           aria-label="Back To Faq List">
+        <md-icon md-font-icon="zmdi-arrow-left" class="zmdi s24"></md-icon>
+    </md-button>
+    <span flex></span>
+    <md-button class="md-icon-button" ng-click="create.create(createForm)" 
+                           aria-label="Save Faq">
+        <md-icon md-font-icon="fa-floppy-o" class="fa s24">
+        </md-icon>
+    </md-button>
+    <md-button class="md-icon-button sidenav-toggle" ng-click="vm.toggleSidenav('sidenav')" hide-gt-md
+                           aria-label="Toggle right pane">
+        <md-icon md-font-icon="zmdi-menu" class="zmdi"></md-icon>
+    </md-button>        
+</div>
+<!-- CONTENT -->
+<md-content class="content" flex tl-scroll>
+    <form name="createForm">
+        <md-input-container class="md-block">
+            <label>Question</label>
+            <input type="text" name="question" ng-model="create.faq.question" md-maxlength="150"/>
+        </md-input-container>
+        <span layout="row">
+            <div flex text-angular ta-toolbar="[['h1','h2','h3','bold','italics','link','quote','ul', 'ol', 'redo', 'undo', 'clear','html', 'insertImage','insertLink', 'insertVideo']]" placeholder-text="Answer" ng-model="create.faq.answer"></div>
+        </span>
+    </form>
+            
+</md-content>
